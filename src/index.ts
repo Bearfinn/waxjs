@@ -162,7 +162,7 @@ export class WaxJS {
     // we ensure that it is not going to be rejected due to a delayed
     // pop up that would otherwise occur post transaction creation
     this.api.transact = async (transaction, namedParams) => {
-      await this.signingApi.prepareTransaction(transaction);
+      // await this.signingApi.prepareTransaction(transaction);
 
       return await transact(transaction, namedParams);
     };
