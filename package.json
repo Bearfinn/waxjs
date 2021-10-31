@@ -1,6 +1,6 @@
 {
   "name": "@bearfinn/waxjs",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Javascript API for integration with the WAX Cloud Wallet.",
   "scripts": {
     "build": "tsc",
@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "eosjs": "^22.1.0",
-    "node-fetch": "^3.0.0"
+    "node-fetch": "^2.0.0"
   },
   "files": [
     "dist"
