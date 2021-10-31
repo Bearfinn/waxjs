@@ -3,6 +3,7 @@ import {
   SignatureProvider,
   Transaction
 } from "eosjs/dist/eosjs-api-interfaces";
+import fetch from "node-fetch";
 import { ILoginResponse } from "./interfaces";
 import { WaxSigningApi } from "./WaxSigningApi";
 
@@ -61,7 +62,7 @@ export class WaxJS {
     ) => void;
   }) {
     this.signingApi = new WaxSigningApi(waxSigningURL, waxAutoSigningURL);
-    this.rpc = new JsonRpc(rpcEndpoint);
+    this.rpc = new JsonRpc(rpcEndpoint, { fetch });
     this.waxSigningURL = waxSigningURL;
     this.waxAutoSigningURL = waxAutoSigningURL;
     this.apiSigner = apiSigner;
